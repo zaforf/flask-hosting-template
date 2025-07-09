@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'c29bcfa698752666def85f68880d22d8'
 @app.route("/update_server", methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('/home/CHANGE_TO_PYTHON_ANYWHERE_USERNAME/CHANGE_TO_GITHUB_REPO_NAME')
+        repo = git.Repo('/home/flaskhosting111/mysite')
         origin = repo.remotes.origin
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
